@@ -1,1 +1,0 @@
-# study-react-node-mongo

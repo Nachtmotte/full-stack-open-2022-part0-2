@@ -9,8 +9,13 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get('https://restcountries.com/v3.1/all')
-      .then(({data}) => setCountries(data));
+      .get("https://restcountries.com/v3.1/all")
+      .then(({ data }) => setCountries(data));
+
+    //With fetch
+    /*fetch("https://restcountries.com/v3.1/all")
+      .then((res) => res.json())
+      .then((data) => setCountries(data));*/
   }, []);
 
   const handleFilterChange = (event) => setNewFilter(event.target.value);
@@ -22,7 +27,7 @@ const App = () => {
         filter={newFilter}
         handleFilterChange={handleFilterChange}
       />
-      <Countries countries={countries} filter={newFilter}/>
+      <Countries countries={countries} filter={newFilter} />
     </div>
   );
 };

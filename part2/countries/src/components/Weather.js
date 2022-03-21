@@ -28,7 +28,7 @@ const Weather = ({ capital }) => {
           <img src={weather.weather_icons[0]} alt="wather_icon" />
           <p>
             <strong>wind: </strong>
-            {weather.wind_speed} direction {weather.wind_dir}
+            {weather.wind_speed} mph direction {weather.wind_dir}
           </p>
         </div>
       )}
